@@ -1,5 +1,6 @@
 import os
 import torch
+import sys
 
 
 def prune_it(p, prune_model_loc, keep_only_ema=False):
@@ -48,4 +49,5 @@ def prune_it(p, prune_model_loc, keep_only_ema=False):
 
 
 if __name__ == "__main__":
-    prune_it('models/ldm/stable-diffusion-v1/model.ckpt')
+    # prune_it('models/ldm/stable-diffusion-v1/model.ckpt')
+    prune_it(sys.argv[1], sys.argv[2])
